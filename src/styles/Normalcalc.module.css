@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&family=Source+Sans+Pro:wght@300&display=swap');
+
+
+.secflex {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 110%;
+    gap: 5px;
+
+}
+
+.secflexfunc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 110%;
+    gap: 5px;
+
+}
+
+.secflexabc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 110%;
+    gap: 10px;
+
+}
+
+.calcflex {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 110%;
+    gap: 10px;
+}
+
+.basicfuncs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    height: 100%;
+
+}
+
+.operations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    height: 100%;
+
+
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    height: 100%;
+}
+
+.genbtn {
+    border: 1px solid rgb(160, 160, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'STIX Two Text', serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.latexicon {
+    font-size: 0.5rem;
+    user-select: none;
+}
+
+.genbtn:hover {
+    background-color: rgb(78, 78, 78);
+    border: 1px solid rgb(78, 78, 78);
+    color: white;
+    box-shadow: 2px 2px 5px gray;
+    z-index: 2;
+    transition: 0.1s;
+    user-select: none;
+}
+
+.genbtn:active {
+    box-shadow: 0px 0px 0px;
+}
+
+.genbtn sup {
+    font-size: 0.5rem;
+}
+
+@media only screen and (max-width:800px) {
+    .secflex {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 110%;
+        gap: 1px;
+
+    }
+
+    .secflexfunc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 110%;
+        gap: 1px;
+        font-size: 0.8rem;
+
+    }
+
+    .secflexabc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 110%;
+        gap: 1px;
+        font-size: 0.8rem;
+
+    }
+
+    .calcflex {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 110%;
+        gap: 1px;
+        font-size: 0.9rem;
+    }
+
+    .genbtn:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(160, 160, 160);
+        box-shadow: 0px 0px 0px gray;
+        z-index: 2;
+        transition: 0.1s;
+    }
+
+    .genbtn:active {
+        background-color: rgb(78, 78, 78);
+        border: 1px solid rgb(78, 78, 78);
+        color: white;
+        box-shadow: 2px 2px 5px gray;
+        z-index: 2;
+        transition: 0.1s;
+    }
+}

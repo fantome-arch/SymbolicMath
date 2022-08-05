@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubbler+One&family=Source+Sans+Pro:wght@300&display=swap');
+
+.uigrid {
+    display: grid;
+    grid-template-rows:  0.7fr 3fr 4fr;
+    height: 100vh;
+    margin: 5px;
+}
+
+.logocontainer {
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+.hamburger{
+    color: rgb(107, 107, 107);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.hamburger:hover{
+    transition: 0.1s;
+    color: black;
+}
+.actuallogo {
+    color: rgb(107, 107, 107);
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    align-items: center;
+    font-family: 'Bubbler One', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-stretch: expanded;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+
+}
+.editorarea {
+    border-bottom: 0.5px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow: none;
+    max-width: inherit;
+    margin-left: 5px;
+    
+
+}
+
+.editor {
+    width: 90%;
+    color: #262626;
+    font-size: 1.5rem;
+    z-index: 2;
+    scrollbar-width: 0;
+    max-width: 100%;
+    word-break: break-all;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.inputsection {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+
+}
+.latextext{
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+.tabcontainer {
+    
+    overflow: auto;
+    user-select: none;
+}
+
+.fieldnavigator {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+    overflow: auto;
+}
+
+.fieldbuttons {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    border: 1px solid rgb(66, 66, 66);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sectionnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 10px;
+
+
+
+}
+
+.calctabbtn {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid rgb(66, 66, 66);
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    margin: 3px;
+}
+
+.solvebtn {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(66, 66, 66);
+    background-color: rgb(66, 66, 66);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.solvebtn:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 29, 29);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.1s;
+    z-index: 3px;
+    box-shadow: 2px 2px 3px gray;
+}
+
+.calctabbtn:hover {
+    background-color: rgb(66, 66, 66);
+    color: white;
+    transition: 0.3s;
+    box-shadow: 1px 1px 3px rgb(66, 66, 66);
+    z-index: 5;
+}
+
+.solutionspace {
+    display: block;
+    overflow-x:auto ;
+}
+.solutionwrapper{
+    height: 60%;
+}
+.solution {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bolder;
+    color: rgb(175, 174, 174);
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding: 2px;
+
+}
+.adspace2{
+    background-color:darkblue ;
+    height: 40%;
+    display: none;
+}
+
+@keyframes solutionanime {
+    from {
+        position: absolute;
+        transform: translateY(50px);
+        opacity: 0;
+        z-index: 2;
+    }
+
+    to {
+        position: static;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.mathsolution {
+    font-size: 2rem;
+    font-weight: bolder;
+    border-left: 5px solid rgb(61, 61, 61);
+    padding-left: 10px;
+    animation-name: solutionanime;
+    animation-duration: 0.2s;
+
+    transition: 0.1s;
+
+}
+
+.fieldbuttons:hover {
+    background-color: rgb(66, 66, 66);
+    color: white;
+    transition: 0.3s;
+    box-shadow: 1px 1px 3px rgb(66, 66, 66);
+    z-index: 5;
+}
+.fieldbuttons:active{
+    background-color: rgb(43, 43, 43);
+    box-shadow: 0px 0px 0px rgb(66, 66, 66);
+}
+
+.selectedtab {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    margin: 3px;
+    color: white;
+    background-color: black;
+};
+.tabtitle{
+    display: block;
+}
+@media only screen and (max-width:800px){
+
+    .fieldbuttons {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    border: 1px solid rgb(66, 66, 66);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: none;
+}
+.fieldbuttons:hover {
+    background-color: white;
+    box-shadow: 0px 0px 0px;
+    color: black;
+    transition: none;
+}
+.fieldbuttons:active{
+    background-color: rgb(43, 43, 43);
+    box-shadow: 0px 0px 0px rgb(66, 66, 66);
+    color: white;
+}
+.tabtitle{
+    display: none;
+}
+.calctabbtn{
+    border-radius: 5px;
+}
+.selectedtab {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    margin: 3px;
+    color: white;
+    background-color: black;
+};
+.adspace2{
+    background-color:darkblue ;
+    height: 40%;
+    display: none;
+}
+}
