@@ -50,9 +50,9 @@ function Generalcalculator(props) {
         return eqn.current.mathField.__controller.moveRight()
       case 'clearall':
         try {
-          eqn.current.mathField.__controller.keystroke('Ctrl-A','keypress')
+          eqn.current.mathField.__controller.keystroke('Ctrl-A','Keypress')
         } catch (error) {
-          
+          console.log(error)
         }
         
         eqn.current.mathField.__controller.backspace()
