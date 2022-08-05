@@ -16,8 +16,8 @@ function Calcnav(props) {
         <div>
             <div className={Generalcalc.tabcontainer}>
                 <div className={Generalcalc.fieldnavigator}>
-                    <div className={Generalcalc.fieldbuttons}>
-                        <span className={Generalcalc.latextext} onClick={()=>{props.navigationbtn('clearall')}}>AC</span>
+                    <div onClick={()=>{props.navigationbtn('clearall')}} className={Generalcalc.fieldbuttons}>
+                        <span className={Generalcalc.latextext} >AC</span>
                     </div>
                     <div className={Generalcalc.fieldbuttons} onClick={()=>{props.navigationbtn('left')}}>
                         <BsArrowLeft />
