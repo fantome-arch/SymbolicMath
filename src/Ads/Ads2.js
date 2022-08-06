@@ -1,5 +1,5 @@
 import { React, useEffect } from 'react'
-function Ads() {
+function Ads2() {
 
     useEffect(() => {
         (window.adsbygoogle = window.adsbygoogle || []).push({})
@@ -9,7 +9,7 @@ function Ads() {
             <ins className="adsbygoogle"
                 style={{display:'block'}}
                 data-ad-client="ca-pub-1395375581684994"
-                data-ad-slot="4055871218"
+                data-ad-slot="9388637685"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
                 ></ins>
@@ -17,4 +17,4 @@ function Ads() {
     )
 }
 
-export default Ads
+export default Ads2
