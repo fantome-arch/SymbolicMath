@@ -2,7 +2,7 @@ import { React, useEffect } from 'react'
 function Ads() {
 
     useEffect(() => {
-        (adsbygoogle = window.adsbygoogle || []).push({})
+        (window.adsbygoogle = window.adsbygoogle || []).push({})
     }, [])
     return (
         <div>
