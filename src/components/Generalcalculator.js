@@ -52,7 +52,7 @@ function Generalcalculator(props) {
         try {
           eqn.current.mathField.__controller.keystroke('Ctrl-A','Keypress')
         } catch (error) {
-          console.log(error)
+
         }
         
         eqn.current.mathField.__controller.backspace()
@@ -69,13 +69,13 @@ function Generalcalculator(props) {
     }
   }
   useEffect(() => {
-
+    eqn.current.mathField.__controller.options.substituteTextarea()
     move()
   }, [])
   console.log()
   const calculate = () => {
 
-
+    console.log()
 
     let generalsolution = equation
     generalsolution = fixformatting(generalsolution)

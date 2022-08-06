@@ -40,6 +40,8 @@ export default function Functionspage(props) {
         <div onClick={()=>props.input('^{ }P_{ }')}className={Normalcalc.genbtn}><span className={Normalcalc.latexicon}>
           <StaticMathField>{`^{ }P_{ }`}</StaticMathField></span></div>
         <div onClick={()=>props.input('e^{}',1)}className={Normalcalc.genbtn}>e<sup><GiSquare /></sup></div>
+
+        <div onClick={()=>props.input('°')}className={Normalcalc.genbtn}>°</div>
       </div>
 
 

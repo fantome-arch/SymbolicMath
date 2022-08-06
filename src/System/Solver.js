@@ -79,7 +79,9 @@ export function solveProblem(str, iseqs) {
             realsol = eqsol.toString()
         }else{
             let eqlist=unlatex.toString().split(',')
-            eqlist=eqlist.map((e)=>{return e.replace(/\(|\)/gm,'')})
+            eqlist[0]=eqlist[0].replace(eqlist[0][0],'')
+            eqlist[eqlist.length-1]=eqlist[eqlist.length-1].replace(eqlist[eqlist.length-1][eqlist[eqlist.length-1].length-1],'')
+            console.log(eqlist)
             eqsol = nerdamer.solveEquations(eqlist)
             realsol = eqsol.toString()
             let equalsignreg=/([a-zA-Z]+),/gm

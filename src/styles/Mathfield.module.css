@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 6fr 1fr;
 
+
 }
 
 @keyframes closinganimation{
@@ -198,6 +199,9 @@
 .calculatorarea{
     max-width: inherit;
     overflow-x: hidden;
+    height: 100vh;
+    overflow-y: auto;
+
 }
 @media only screen and (max-width:800px){
     .ui{

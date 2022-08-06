@@ -184,6 +184,9 @@ export function fixformatting(str){
 	let comboregex=/\^{?([0-9a-zA-Z]+)}?C_{?([0-9A-Za-z]+)}?/gm
 	let permuregex=/\^{?([0-9a-zA-Z]+)}?P_{?([0-9A-Za-z]+)}?/gm
 	let differentialregex=/\\frac{d}{d\\left\(([a-zA-Z]{1})\\right\)\^?{?([0-9]*)}?}\\left\(/gm
+	if(str.includes('°')){
+		str=str.replace('°','(\\pi/180)')
+	}
 	if(str.includes('log\\left(')){
 		str=str.replaceAll('log\\left(','log10\\left(')
 	}
