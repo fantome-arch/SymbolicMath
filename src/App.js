@@ -9,6 +9,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { FiHelpCircle } from 'react-icons/fi'
 import Help from "./components/Help";
 import Logo from "./components/Logo";
+import Ads from "./Ads/Ads";
 function App() {
   
   const [togglenav, setnav] = useState(mathstyle.navbar)
@@ -47,7 +48,7 @@ function App() {
           </Routes>
         </div>
         <div className={mathstyle.adspace}>
-          Ad space
+          <Ads/>
         </div>
       </main>
     
