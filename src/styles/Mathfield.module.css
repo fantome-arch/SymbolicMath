@@ -40,8 +40,6 @@
     background-color: rgb(202, 202, 202);
     z-index: 5;
     display: block;
-    display: flex;
-    flex-direction: column;
     padding: 10px;
     animation-name: openinganimation;
     animation-duration: 0.3s;
@@ -84,7 +82,7 @@
 
 }
 .navcomponent{
-
+    margin: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -100,7 +98,7 @@
 .navcomponentselected{
 
    
-   
+    margin: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
