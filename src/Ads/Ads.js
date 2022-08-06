@@ -3,7 +3,7 @@ import adstyle from '../styles/Generalcalc.module.css'
 function Ads() {
 
     useEffect(() => {
-        (adsbygoogle = window.adsbygoogle || []).push({})
+        (window.adsbygoogle = window.adsbygoogle || []).push({})
     }, [])
     return (
         <div>
