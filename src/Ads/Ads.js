@@ -1,5 +1,5 @@
 import { React, useEffect } from 'react'
-
+import adstyle from '../styles/Generalcalc.module.css'
 function Ads() {
 
     useEffect(() => {
@@ -8,7 +8,7 @@ function Ads() {
     return (
         <div>
             <ins class="adsbygoogle"
-                style="display:block"
+                style={adstyle.adstyle}
                 data-ad-client="ca-pub-1395375581684994"
                 data-ad-slot="4055871218"
                 data-ad-format="auto"
