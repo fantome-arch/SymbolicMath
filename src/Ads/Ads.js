@@ -3,11 +3,11 @@ import adstyle from '../styles/Generalcalc.module.css'
 function Ads() {
 
     useEffect(() => {
-        (window.adsbygoogle = window.adsbygoogle || []).push({})
+        (adsbygoogle = window.adsbygoogle || []).push({})
     }, [])
     return (
         <div>
-            <ins class="adsbygoogle"
+            <ins className="adsbygoogle"
                 style={adstyle.adstyle}
                 data-ad-client="ca-pub-1395375581684994"
                 data-ad-slot="4055871218"
