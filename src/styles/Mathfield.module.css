@@ -10,7 +10,9 @@
 
 
 }
-
+::-webkit-scrollbar{
+    display: none;
+}
 @keyframes closinganimation{
     from{
         transform: translateX(0);
@@ -198,9 +200,8 @@
 }
 .calculatorarea{
     max-width: inherit;
-    overflow-x: hidden;
+    overflow: hidden;
     height: 100vh;
-    overflow-y: auto;
 
 }
 @media only screen and (max-width:800px){
@@ -210,6 +211,7 @@
     }
     .adspace{
        transform: scale(0);
+       height: 0;
     }
     .navbaropen{
         position: absolute;
