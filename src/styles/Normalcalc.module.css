@@ -6,14 +6,14 @@
     grid-template-columns: 1fr 2fr 1fr;
     gap: 5px;
     overflow: auto;
-    height: 98%;
+    height:80%;
 
 }
 
 .secflexfunc {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 98%;
+    height: 80%;
     gap: 5px;
     overflow: auto;
 }
@@ -21,7 +21,7 @@
 .secflexabc {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 98%;
+    height: 80%;
     gap: 10px;
     overflow: auto;
 
@@ -30,7 +30,7 @@
 .calcflex {
     display: grid;
     grid-template-columns: 1fr;
-    height: 90%;
+    height: 75%;
     gap: 10px;
     overflow: auto;
 }
