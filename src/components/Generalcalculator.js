@@ -168,7 +168,9 @@ function Generalcalculator(props) {
           {evaluatable ? (<><div className={`${Generalcalc.solution}`}>Solution: </div>
             <div key={getshortid()} className={Generalcalc.mathsolution}><StaticMathField>{evaluatable}</StaticMathField></div></>) : ''}
         </div>
-        <div className={Generalcalc.adspace2}><Ads2/></div>
+        <div className={Generalcalc.adspace2}>
+          {/* <Ads2/> */}
+        </div>
       </div>
       <div className={Generalcalc.inputsection} >
         <div onClick={calculate} className={Generalcalc.solvebtn}><span>Solve</span></div>
