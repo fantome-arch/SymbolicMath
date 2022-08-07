@@ -4,7 +4,7 @@
 .uigrid {
     display: grid;
     grid-template-rows:  0.7fr 3fr 3.5fr;
-    height: 100vh;
+    height: 100%;
     margin: 5px;
     overflow: hidden;
 
