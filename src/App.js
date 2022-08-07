@@ -22,7 +22,7 @@ function App() {
     setnav(mathstyle.navbar)
   }
   return (
-      <div className={mathstyle.ui}>
+      <main className={mathstyle.ui}>
 
         <div className={mathstyle.calculatorarea} >
           <nav className={togglenav}>
@@ -50,7 +50,7 @@ function App() {
         <div className={mathstyle.adspace}>
           <Ads/>
         </div>
-      </div>
+      </main>
     
   )
 }
