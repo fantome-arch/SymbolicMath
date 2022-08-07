@@ -158,15 +158,15 @@
 
 .solutionspace {
     display: block;
-    overflow:auto ;
+    overflow-x:auto ;
+    overflow-y:scroll ;
+    max-height: 42%;
 
 }
 .solutionwrapper{
     height: 60%;
 }
-.adstyle{
-    display: block;
-}
+
 .solution {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bolder;
