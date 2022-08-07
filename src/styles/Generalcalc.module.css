@@ -7,6 +7,8 @@
     height: 100vh;
     margin: 5px;
     overflow: hidden;
+    min-height: 0;
+    min-width: 0;
 
 }
 
@@ -159,7 +161,7 @@
 .solutionspace {
     display: block;
     overflow:auto ;
-    max-height: 30%;
+
 
 }
 .solutionwrapper{
