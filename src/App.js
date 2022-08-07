@@ -48,7 +48,7 @@ function App() {
           </Routes>
         </div>
         <div className={mathstyle.adspace}>
-          {/* <Ads/> */}
+          <Ads/>
         </div>
       </main>
     
