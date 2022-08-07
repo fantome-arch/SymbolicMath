@@ -159,8 +159,8 @@
 .solutionspace {
     display: block;
     overflow-x:auto ;
-    overflow-y:scroll ;
-    max-height: 42%;
+    overflow-y:hidden ;
+    max-height: 30%;
 
 }
 .solutionwrapper{
