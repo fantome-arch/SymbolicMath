@@ -179,7 +179,7 @@
     height: 40%;
 }
 .expressioninputter{
-    overflow: auto;
+    overflow: hidden;
     height: 90%;
 }
 
