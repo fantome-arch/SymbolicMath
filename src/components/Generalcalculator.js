@@ -149,7 +149,7 @@ function Generalcalculator(props) {
   //rendering
 
   return (
-    <div className={Generalcalc.uigrid}>
+    <div className={Generalcalc.uigrid} style={{height:'100vh'}}>
       
       <div className={`${Generalcalc.editorarea}`}>
         <div className={`${Generalcalc.editor}`}>
