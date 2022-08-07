@@ -149,7 +149,7 @@ function Generalcalculator(props) {
   //rendering
 
   return (
-    <main className={Generalcalc.uigrid}>
+    <div className={Generalcalc.uigrid}>
       
       <div className={`${Generalcalc.editorarea}`}>
         <div className={`${Generalcalc.editor}`}>
@@ -175,7 +175,7 @@ function Generalcalculator(props) {
         <Calcnav input={typetext} navigationbtn={fieldnavigation} />
       </div>
 
-    </main>
+    </div>
 
   );
 }
