@@ -11,7 +11,6 @@ function Ads2() {
                 data-ad-client="ca-pub-1395375581684994"
                 data-ad-slot="9388637685"
                 data-ad-format="auto"
-                data-full-width-responsive="true"
                 ></ins>
         </div>
     )
