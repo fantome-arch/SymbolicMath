@@ -280,6 +280,12 @@
     color: white;
     background-color: black;
 };
+.solutionspace {
+    display: block;
+    overflow:auto ;
+
+
+}
 .adspace2{
     height: 30%;
 }
