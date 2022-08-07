@@ -208,7 +208,9 @@
         display: grid;
         grid-template-columns: 100%;
     }
-  
+    .adspace{
+        display: block;
+    }
     .navbaropen{
         position: absolute;
         height: 100vh;
