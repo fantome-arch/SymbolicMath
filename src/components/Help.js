@@ -9,7 +9,7 @@ function Help(props) {
           <h1 className={Helpcss.headings}>How to use</h1>
           <p className={Helpcss.paragraph}>Click/Tap on the keyboard provided in order to enter mathematical expressions in the math field.
             use <span className={Helpcss.navbutton}><BsArrowLeft /></span > and <span className={Helpcss.navbutton}><BsArrowRight /></span> buttons in order to navigate through the math field.
-            Alternatively, you can use a physical keyboard to enter expressions and the arrow keys to navigate thriguh the field.
+            Alternatively, you can use a physical keyboard to enter expressions and the arrow keys to navigate through the field.
             If you are familiar with LaTeX you can directly type in LaTeX commands using a physical keyboard to enter various expressions.
 
 
