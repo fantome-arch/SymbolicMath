@@ -13,7 +13,7 @@ function Calcnav(props) {
         setselected(selection)
     }
     return (
-        <div>
+        <div className={Generalcalc.expressioninputter}>
             <div className={Generalcalc.tabcontainer}>
                 <div className={Generalcalc.fieldnavigator}>
                     <div onClick={()=>{props.navigationbtn('clearall')}} className={Generalcalc.fieldbuttons}>
