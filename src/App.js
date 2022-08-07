@@ -36,7 +36,7 @@ function App() {
             <div onClick={()=>{ navigate('/')}} className={`${window.location.pathname==='/'? mathstyle.navcomponentselected:mathstyle.navcomponent}`}>
               <span ><AiOutlineCalculator style={{textAlign:'center',fontSize:'2rem'}}/> Calculator</span>
             </div>
-            <div onClick={()=>{ navigate('/#/help')}}className={`${window.location.pathname==='/#/help'? mathstyle.navcomponentselected:mathstyle.navcomponent}`}>
+            <div onClick={()=>{ navigate('/#/help')}}className={`${window.location.pathname==='/help'? mathstyle.navcomponentselected:mathstyle.navcomponent}`}>
               <span ><FiHelpCircle style={{textAlign:'center',fontSize:'2rem'}}/>Help</span>
             </div>
           </nav>
@@ -44,7 +44,7 @@ function App() {
           <Routes>
 
             <Route path='/' element={<Generalcalculator togglenav={togglenavigation} closenav={closenav} />} exact />
-            <Route path='/#/help' element={<Help togglenav={togglenavigation} closenav={closenav} />} exact />
+            <Route path='/help' element={<Help togglenav={togglenavigation} closenav={closenav} />} exact />
           </Routes>
         </div>
         <div className={mathstyle.adspace}>

@@ -170,7 +170,7 @@ function Generalcalculator(props) {
         </div>
         <div className={Generalcalc.adspace2}><Ads2/></div>
       </div>
-      <div className={Generalcalc.inputsection} unselectable="on">
+      <div className={Generalcalc.inputsection} >
         <div onClick={calculate} className={Generalcalc.solvebtn}><span>Solve</span></div>
         <Calcnav input={typetext} navigationbtn={fieldnavigation} />
       </div>

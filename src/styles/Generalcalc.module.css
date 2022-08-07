@@ -71,14 +71,7 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.inputsection {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
 
-
-
-}
 .latextext{
     font-size: 0.8rem;
     font-weight: bolder;
