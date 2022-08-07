@@ -209,7 +209,7 @@
         grid-template-columns: 100%;
     }
     .adspace{
-        display: block;
+       transform: scale(0);
     }
     .navbaropen{
         position: absolute;
