@@ -6,7 +6,6 @@
 .ui{
     display: grid;
     grid-template-columns: 6fr 1fr;
-    min-height: 100vh;
     height:100%;
 
 
