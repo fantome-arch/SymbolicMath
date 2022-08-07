@@ -11,7 +11,7 @@ import formatlogequation from "../System/Expressionmodifier";
 import { formatlimits, fixformatting } from "../System/Expressionmodifier";
 import { inequality, findineq } from "../System/Validation";
 import { solveProblem } from "../System/Solver";
-import Ads2 from "../Ads/Ads2";
+// import Ads2 from "../Ads/Ads2";
 const nerdamer = require('nerdamer');
 require('nerdamer/Algebra');
 require('nerdamer/Calculus');
