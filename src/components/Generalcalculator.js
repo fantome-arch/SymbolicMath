@@ -169,7 +169,7 @@ function Generalcalculator(props) {
             <div key={getshortid()} className={Generalcalc.mathsolution}><StaticMathField>{evaluatable}</StaticMathField></div></>) : ''}
         </div>
         <div className={Generalcalc.adspace2}>
-          {/* <Ads2/> */}
+          <Ads2/>
         </div>
       </div>
       <div className={Generalcalc.inputsection} >
