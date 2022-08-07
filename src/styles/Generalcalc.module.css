@@ -159,6 +159,7 @@
 .solutionspace {
     display: block;
     overflow-x:auto ;
+    max-height: 42%;
 }
 .solutionwrapper{
     height: 60%;
