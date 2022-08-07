@@ -2,7 +2,7 @@
 // eqn.current.mathField.__controller.moveLeft()
 import React, { useState } from "react";
 import Generalcalculator from './components/Generalcalculator';
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Routes, Route, useNavigate} from 'react-router-dom'
 import { AiOutlineCalculator } from 'react-icons/ai'
 import mathstyle from './styles/Mathfield.module.css';
 import { GiHamburgerMenu } from 'react-icons/gi'
