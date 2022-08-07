@@ -183,7 +183,7 @@
 }
 .expressioninputter{
     overflow: auto;
-    height: 100%;
+    height: 90%;
 }
 
 @keyframes solutionanime {
