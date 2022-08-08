@@ -210,7 +210,7 @@
         grid-template-columns: 100%;
     }
     .adspace{
-        position: absolute;
+       position: absolute;
        transform: scale(0);
        height: 0;
     }
