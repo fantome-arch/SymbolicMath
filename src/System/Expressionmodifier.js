@@ -76,7 +76,7 @@ function formatlogequation(str){
 }
 
 export function formatlimits(str){
-	let regex=/lim_{([a-zA-Z]{1})\\rightarrow ?([^ ])}\\left\(/gm
+	let regex=/lim_{([a-zA-Z]{1})\\rightarrow ?([^ ]+)}\\left\(/gm
 	let match=regex.exec(str)
 	let paren_list=getallclosedparen(str)
 	paren_list.forEach(element=>{
@@ -91,6 +91,7 @@ export function formatlimits(str){
 		regex.lastIndex=0
 		match=regex.exec(str)
 	})
+	console.log(str)
 	return str
 }
 export function formatcomplexfactorial(str){
