@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     overflow: auto;
-    height: 90vh;
+    height: 100vh;
 }
 
 .headings{
@@ -24,6 +24,7 @@
 .innercontainer{
     width: 50%;
     overflow: auto;
+    height: 100vh;
 }
 .paragraph{
     font-family: 'Source Sans Pro',serif;
@@ -35,5 +36,6 @@
     .innercontainer{
         width: 100%;
         overflow: auto;
+        height: 100vh;
     }
 }
