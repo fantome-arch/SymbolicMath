@@ -9,7 +9,6 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { FiHelpCircle } from 'react-icons/fi'
 import Help from "./components/Help";
 import Logo from "./components/Logo";
-import Ads from "./Ads/Ads";
 function App() {
   
   const [togglenav, setnav] = useState(mathstyle.navbar)
@@ -46,9 +45,6 @@ function App() {
             <Route path='/' element={<Generalcalculator togglenav={togglenavigation} closenav={closenav} />} exact />
             <Route path='/help' element={<Help togglenav={togglenavigation} closenav={closenav} />} exact />
           </Routes>
-        </div>
-        <div className={mathstyle.adspace}>
-          <Ads/>
         </div>
       </main>
     
