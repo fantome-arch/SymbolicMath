@@ -158,14 +158,11 @@
 
 .solutionspace {
     display: block;
-    overflow:auto ;
+    overflow:hidden ;
+    height: 100%;
 
 
 }
-.solutionwrapper{
-    height: 60%;
-}
-
 .solution {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bolder;

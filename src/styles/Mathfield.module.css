@@ -4,7 +4,8 @@
 }
 
 .ui{
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
     
 
 }
@@ -192,7 +193,10 @@
     letter-spacing: 5px;
 
 }
-
+.adspace{
+    box-shadow: 1px 1px 5px gray;
+    height: 100vh;
+}
 .calculatorarea{
     max-width: inherit;
     overflow: hidden;
@@ -203,6 +207,10 @@
     .ui{
         display: grid;
         grid-template-columns: 100%;
+    }
+    .adspace{
+       transform: scale(0);
+       height: 0;
     }
     .navbaropen{
         position: absolute;

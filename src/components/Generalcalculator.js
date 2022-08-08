@@ -11,7 +11,6 @@ import formatlogequation from "../System/Expressionmodifier";
 import { formatlimits, fixformatting } from "../System/Expressionmodifier";
 import { inequality, findineq } from "../System/Validation";
 import { solveProblem } from "../System/Solver";
-import Ads2 from "../Ads/Ads2";
 const nerdamer = require('nerdamer');
 require('nerdamer/Algebra');
 require('nerdamer/Calculus');
@@ -163,15 +162,14 @@ function Generalcalculator(props) {
 
         </div>
       </div>
+
+
       <div onClick={props.closenav} className={`${Generalcalc.solutionspace}`}>
-        <div className={`${Generalcalc.solutionwrapper}`}>
           {evaluatable ? (<><div className={`${Generalcalc.solution}`}>Solution: </div>
             <div key={getshortid()} className={Generalcalc.mathsolution}><StaticMathField>{evaluatable}</StaticMathField></div></>) : ''}
-        </div>
-        <div className={Generalcalc.adspace2}>
-          <Ads2/>
-        </div>
       </div>
+
+
       <div className={Generalcalc.inputsection} >
         <div onClick={calculate} className={Generalcalc.solvebtn}><span>Solve</span></div>
         <Calcnav input={typetext} navigationbtn={fieldnavigation} />
