@@ -124,11 +124,12 @@ export function solveProblem(str, iseqs) {
 
             }
         })
-        evaluationarr.forEach((solnext, idx) => {
-            if (!solstr.includes(solnext)) {
-                solstr += solnext + `${idx === evaluationarr.length - 1 ? '' : ', '}`
+        evaluationarr=new Set(evaluationarr)
+        let curval=0
+        evaluationarr.forEach((solnext) => {
+                solstr += solnext + `${curval === evaluationarr.size - 1 ? '' : ', '}`
+                curval+=1
 
-            }
 
         })
         if(solstr.includes('log')){
