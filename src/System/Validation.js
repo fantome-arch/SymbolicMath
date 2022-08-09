@@ -2,7 +2,7 @@
 
 
 
-export const int_regex =/\\int {0,1}_{\\{0,1} {0,1}(.*?)}\^{\\{0,1} {0,1}(.*?)}\\left\((...*?)\\right\)d\\left\((.){1}\\right\)|\\int {0,1}_{?([0-9a-z]*?)}?\^{?([0-9a-z]*?)}?\\left\(([^ ]*?)\\right\)d\\left\((.){1}\\right\)/gm
+export const int_regex =/\\int {0,1}_{\\{0,1} {0,1}(.*?)}\^{\\{0,1} {0,1}(.*?)}\\left\(([^ ]*)\\right\)d\\left\((.){1}\\right\)|\\int {0,1}_{?([0-9a-z]+?)}?\^{?([0-9a-z]+?)}?\\left\(([^ ]*?)\\right\)d\\left\((.){1}\\right\)/gm
 export const limit_regex=/lim_{([a-zA-Z]{1})\\rightarrow ?([^ ]+)}\\left\(/gm
 
 
