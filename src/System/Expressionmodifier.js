@@ -185,7 +185,7 @@ export function fixformatting(str){
 	let comboregex=/\^{?([0-9a-zA-Z]+)}?C_{?([0-9A-Za-z]+)}?/gm
 	let permuregex=/\^{?([0-9a-zA-Z]+)}?P_{?([0-9A-Za-z]+)}?/gm
 	let differentialregex=/\\frac{d}{d\\left\(([a-zA-Z]{1})\\right\)\^?{?([0-9]*)}?}\\left\(/gm
-	let mulregex=/([A-Za-z]{1})(?:\\sin|\\cos|\\tan|csc|sec|cot|a\\sin|a\\cos|a\\tan|acsc|asec|acot|\\sinh|\\cosh|\\tanh|csch|sech|coth|a\\sinh|a\\cosh|acsch|asech|acoth|log|round|rect|lcm|gcd|fib|floor|ceil|max|min|\\sqrt)/gm
+	let mulregex=/([A-Za-z]{1})(?:\\sin|\\cos|\\tan|csc|sec|abs|cot|a\\sin|a\\cos|a\\tan|acsc|asec|acot|\\sinh|\\cosh|\\tanh|csch|sech|coth|a\\sinh|a\\cosh|acsch|asech|acoth|log|round|rect|lcm|gcd|fib|floor|ceil|max|min|\\sqrt)/gm
 	if(mulregex.test(str)){
 		mulregex.lastIndex=0
 		let match=mulregex.exec(str)
