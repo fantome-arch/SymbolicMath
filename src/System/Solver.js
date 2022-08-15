@@ -7,7 +7,6 @@ require('nerdamer/Extra');
 export function solveProblem(str, iseqs) {
 
     if (!iseqs) {
-
         try {
             let unlatex = nerdamer.convertFromLaTeX(str)
             let evaluation = nerdamer(unlatex).evaluate()
@@ -64,15 +63,18 @@ export function solveProblem(str, iseqs) {
         }
 
     } else {
+
         let unlatex = nerdamer.convertFromLaTeX(str)
+
         let variableextractor = /([a-z]{1,6})/gm
         let eqsol;
         let realsol;
-        if (checkdublicate(str, variableextractor) === 1 && !str.includes(',')) {
+        if (checkdublicate(unlatex, variableextractor) === 1 && !str.includes(',')) {
             variableextractor.lastIndex = 0
-            let match = variableextractor.exec(str)
+            let match = variableextractor.exec(unlatex)
             eqsol = nerdamer.solveEquations(unlatex.toString(), match[1])
             realsol = eqsol.toString()
+            realsol=String(correctsolution(realsol.split(','),unlatex))
 
         } else if(!str.includes(',')) {
             eqsol = nerdamer.solveEquations(unlatex.toString())
@@ -81,7 +83,6 @@ export function solveProblem(str, iseqs) {
             let eqlist=unlatex.toString().split(',')
             eqlist[0]=eqlist[0].replace(eqlist[0][0],'')
             eqlist[eqlist.length-1]=eqlist[eqlist.length-1].replace(eqlist[eqlist.length-1][eqlist[eqlist.length-1].length-1],'')
-            console.log(eqlist)
             eqsol = nerdamer.solveEquations(eqlist)
             realsol = eqsol.toString()
             let equalsignreg=/([a-zA-Z]+),/gm
@@ -152,4 +153,32 @@ function checkdublicate(str, regex) {
         match = regex.exec(str)
     }
     return new Set(dublist).size
+}
+function correctsolution(sollist,unlatex){
+    let finalsolution=[]
+    let varex=/([a-z]{1,6})/gm
+    let variable=varex.exec(unlatex)[1]
+    let varobj={}
+    let eqpart=unlatex.toString().split('=')
+    sollist.forEach(sol=>{
+        varobj[variable]=sol
+        try {
+            let sol1=nerdamer(eqpart[0],varobj)
+            try {
+                let sol2=nerdamer(eqpart[1],varobj)
+                let iscorr=nerdamer(sol1).eq(sol2)
+                if(iscorr){
+                    finalsolution.push(sol)
+                }
+                
+            } catch (error) {
+                
+            }
+        } catch (error) {
+            
+        }
+    })
+    return finalsolution
+
+
 }
