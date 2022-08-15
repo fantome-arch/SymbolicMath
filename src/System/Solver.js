@@ -66,7 +66,7 @@ export function solveProblem(str, iseqs) {
 
         let unlatex = nerdamer.convertFromLaTeX(str)
 
-        let variableextractor = /([a-z]{1,6})/gm
+        let variableextractor = /(?:beta)|([abcdfghjklmnopqrstuvwxyz]{1,6})/gm
         let eqsol;
         let realsol;
         if (checkdublicate(unlatex, variableextractor) === 1 && !str.includes(',')) {
@@ -156,7 +156,7 @@ function checkdublicate(str, regex) {
 }
 function correctsolution(sollist,unlatex){
     let finalsolution=[]
-    let varex=/([a-z]{1,6})/gm
+    let varex=/(?:beta)|([abcdfghjklmnopqrstuvwxyz]{1,6})/gm
     let variable=varex.exec(unlatex)[1]
     let varobj={}
     let eqpart=unlatex.toString().split('=')
