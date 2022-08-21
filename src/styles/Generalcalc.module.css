@@ -202,11 +202,14 @@
     padding-left: 10px;
     animation-name: solutionanime;
     animation-duration: 0.2s;
-
+    cursor: pointer;
     transition: 0.1s;
 
 }
-
+.inputsection{
+    width: 100vw;
+    overflow: auto;
+}
 .fieldbuttons:hover {
     background-color: rgb(66, 66, 66);
     color: white;
@@ -234,6 +237,12 @@
 };
 .tabtitle{
     display: block;
+}
+.altsolinfo{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 0.5rem;
+
 }
 @media only screen and (max-width:800px){
 

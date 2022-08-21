@@ -198,7 +198,7 @@ export function fixformatting(str){
 		str=str.replace('°','(\\pi/180)')
 	}
 	if(str.includes('log\\left(')){
-		str=str.replaceAll('log\\left(','log10\\left(')
+		str=str.replaceAll('log\\left(','(1/log(10))*log\\left(')
 	}
 	if(str.includes('ln\\left(')){
 		str=str.replaceAll('ln\\left(','log\\left(')

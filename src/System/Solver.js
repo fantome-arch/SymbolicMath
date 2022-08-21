@@ -5,12 +5,12 @@ require('nerdamer/Solve');
 require('nerdamer/Extra');
 
 export function solveProblem(str, iseqs) {
-
     if (!iseqs) {
         try {
             let unlatex = nerdamer.convertFromLaTeX(str)
             let evaluation = nerdamer(unlatex).evaluate()
             let simplification = nerdamer(unlatex).simplify()
+
             try {
                 // eslint-disable-next-line
                 let tempnum = eval(evaluation.toString())
@@ -37,7 +37,7 @@ export function solveProblem(str, iseqs) {
                         return String(tempnum)
                     }
                 } catch (error) {
-                    let regex = /(?:\\left\))?\\frac\{([0-9]+)\}\{([0-9]+)\}(?:\\right\))?/gm
+                    let regex = /(?:\\left\()?\\frac\{([0-9]+)\}\{([0-9]+)\}(?:\\right\))?/gm
                     let sol = evaluation.toString().length < simplification.toString().length && evaluation.toString() !== unlatex ? evaluation.toString() : simplification.toString()
                     let sollatex = nerdamer.convertToLaTeX(sol).toString()
                     let match = regex.exec(sollatex)

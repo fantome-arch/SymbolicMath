@@ -33,6 +33,8 @@ function Generalcalculator(props) {
 
   const [equation, setEquation] = useState('');
   const [evaluatable, seteval] = useState('');
+  const [evaluatable2,seteval2]=useState()
+  const [iseval1,setiseval1]=useState(true)
   const eqn = useRef()
   const move = () => {
     eqn.current.mathField.__controller.container.css('width', '100%')
@@ -43,6 +45,7 @@ function Generalcalculator(props) {
       default:
         return eqn.current.mathField.__controller.backspace()
       case 'backspace':
+
         return eqn.current.mathField.__controller.backspace()
       case 'left':
         return eqn.current.mathField.__controller.moveLeft()
@@ -72,10 +75,8 @@ function Generalcalculator(props) {
     eqn.current.mathField.__controller.options.substituteTextarea()
     move()
   }, [])
-  console.log()
   const calculate = () => {
 
-    console.log()
 
     let generalsolution = equation
     generalsolution = fixformatting(generalsolution)
@@ -97,7 +98,7 @@ function Generalcalculator(props) {
       }
       //.............limits check.................
       generalsolution = formatlimits(generalsolution)
-      console.log(generalsolution)
+
       let realsol = solveProblem(generalsolution, false)
       return seteval(realsol)
 
@@ -144,7 +145,33 @@ function Generalcalculator(props) {
 
   }
 
+ function getaltsol(){
+  if(!iseval1){
+    return setiseval1(true)
+  }
+  if(!evaluatable.includes(',')){
+    let unlex=nerdamer.convertFromLaTeX(evaluatable).toString()
+    let newsol=nerdamer(unlex).expand().toString()
+    let latex=nerdamer.convertToLaTeX(newsol).toString()
+    seteval2(latex)
+    if(iseval1){
+      return setiseval1(false)
+    }
 
+  }else{
+    let sollst=evaluatable.split(',')
+    let newlist=sollst.map(sol=>{
+      let unlex=nerdamer.convertFromLaTeX(sol).toString()
+      let newsol=nerdamer(unlex).expand().toString()
+      let latex=nerdamer.convertToLaTeX(newsol).toString()
+      return latex
+    })
+    seteval2(String(newlist))
+    if(iseval1){
+      return setiseval1(false)
+    }
+  }
+ }
   //rendering
 
   return (
@@ -156,7 +183,7 @@ function Generalcalculator(props) {
 
             value={equation}
             ref={eqn}
-            onChange={(e) => { setEquation(e); seteval('') }}
+            onChange={(e) => { setEquation(e); seteval('');setiseval1(true) }}
             autoCommands="pi theta sqrt sum prod alpha beta gamma rho"
             autoOperatorNames="sin cos tan sinh cosh tanh" />
 
@@ -166,7 +193,8 @@ function Generalcalculator(props) {
 
       <div onClick={props.closenav} className={`${Generalcalc.solutionspace}`}>
           {evaluatable ? (<><div className={`${Generalcalc.solution}`}>Solution: </div>
-            <div key={getshortid()} className={Generalcalc.mathsolution}><StaticMathField>{evaluatable}</StaticMathField></div></>) : ''}
+            <div key={getshortid()} onClick={getaltsol} className={Generalcalc.mathsolution}><StaticMathField>{iseval1? evaluatable:evaluatable2}
+            </StaticMathField><div className={`${Generalcalc.altsolinfo}`}>Click/Tap for an alternate solution (if possible)</div></div></>) : ''}
       </div>
 
 
