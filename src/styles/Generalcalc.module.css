@@ -204,6 +204,7 @@
     animation-duration: 0.2s;
     cursor: pointer;
     transition: 0.1s;
+    overflow-x: auto;
 
 }
 .inputsection{
