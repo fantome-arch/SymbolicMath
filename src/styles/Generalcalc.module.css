@@ -289,9 +289,12 @@
 };
 .solutionspace {
     display: block;
-    overflow:auto ;
+    overflow-x:auto ;
 
 
+}
+.mathsolution{
+    overflow-x: auto;
 }
 .adspace2{
     height: 30%;
